@@ -5,8 +5,9 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity dev",
-    "start": "sanity start",
+    "dev": "sanity dev && node scripts/dev-api.js",
+    "dev:api": "node scripts/dev-api.js",
+    "start": "sanity start &&  node scripts/dev-api.js",
     "build": "sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
@@ -15,6 +16,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/client": "^7.14.1",
     "@sanity/vision": "^5.9.0",
     "react": "^19.1",
     "react-dom": "^19.1",
@@ -22,8 +24,10 @@
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "@sanity/eslint-config-studio": "^6.0.0",
     "@types/react": "^19.1",
+    "@vercel/node": "^3.2.29",
     "eslint": "^9.28",
     "prettier": "^3.5",
     "typescript": "^5.8"
