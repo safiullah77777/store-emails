@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'store-emails',
 
   projectId: process.env.SANITY_PROJECT_ID || 'hidec648',
-  dataset: process.env.SANITY_DATASET || 'production',
+  dataset: process.env.SANITY_DATASET || 'development',
 
   plugins: [structureTool(), visionTool()],
 
